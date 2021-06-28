@@ -24,7 +24,7 @@ The New Relic Ruby agent automatically collects many metrics. It also includes a
 
 The easiest way to capture custom instrumentation is by tracing calls to a particular method. Tracing a method as described below will insert an additional node in your transaction traces for each invocation of that method, providing greater detail about where time is going in your transactions.
 
-Method tracers are software probes you can put on a method of any class. The probes use alias method chaining to insert themselves when the target methods execute and gather custom instrumentation on their performance.
+Method tracers are software probes you can put on a method of any class. The probes use alias method chaining to insert themselves when the target methods execute and gather custom instrumentation on their performance. Method tracers must occur within a transaction in order to be reported to New Relic.
 
 ## Tracing in class definitions [#tracing-classes]
 
